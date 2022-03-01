@@ -15,25 +15,44 @@ settings:
   dayInHistogramNotOperational: ' incident(s)' # xx incident(s) recorded
 
 monitors:
-  - id: workers-cloudflare-com # unique identifier
-    name: workers.cloudflare.com
-    description: 'You write code. They handle the rest.' # default=empty
-    url: 'https://workers.cloudflare.com/' # URL to fetch
+  - id: MainSite # unique identifier
+    name: CUETCONNECT(MainSite)
+    description: 'This is our main site! Being Served from Vercel! ' # default=empty
+    url: 'https://cuetconnect.org/' # URL to fetch
     method: GET # default=GET
     expectStatus: 200 # operational status, default=200
     followRedirect: false # should fetch follow redirects, default=false
-    linkable: false # allows the title to be a link, default=true
+    linkable: true # allows the title to be a link, default=true
 
-  - id: www-cloudflare-com
-    name: www.cloudflare.com
-    description: 'Built for anything connected to the Internet.'
-    url: 'https://www.cloudflare.com'
+  - id: ForumSite
+    name: CUETCONNECT(ForumSite)
+    description: 'Forum site for CUETians! Being served from FreeFlarum!'
+    url: 'https://forum.cuetconnect.org/'
     method: GET
     expectStatus: 200
     linkable: true # allows the title to be a link, default=true
 
-  - id: blog-cloudflare-com
-    name: The Cloudflare Blog
-    url: 'https://blog.cloudflare.com/'
+  - id: AdmissionSite
+    name: CUETCONNECT(AdmissionSite)
+    description: 'Site for admission releted info. Being served from Github Pages!'
+    url: 'https://admission.cuetconnect.org/'
     method: GET
     expectStatus: 200
+    linkable: true
+
+  - id: NoticesSite
+    name: CUETCONNECT(NoticesSite)
+    description: 'Site for general notices. Being served from Github Pages!'
+    url: 'https://notices.cuetconnect.org/'
+    method: GET
+    expectStatus: 200
+    linkable: true
+
+  - id: ShopSite
+    name: CUETCONNECT(ShopSite)
+    description: 'Wordpress Ecommerce site. Being served from a USA Datacenter !'
+    url: 'https://shop.cuetconnect.org/'
+    method: GET
+    expectStatus: 200
+    linkable: true
+
